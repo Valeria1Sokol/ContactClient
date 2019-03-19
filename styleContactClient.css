@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+}
+
+body {
+    background-color: white;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: #01ae54;
+    z-index: 1000;
+}
+
+header .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #019046;
+    padding: 0.6vw 50px;
+    font-size: 0.75vw;
+    font-family: OpenSans-Regular, sans-serif;
+}
+
+header .menu a {
+    color: #ffffff;
+    margin-right: 1.2vw;
+}
+
+header .menu a:hover {
+    text-decoration: underline;
+    text-underline-color: white;
+}
+
+header .menu a:last-child {
+    margin-right: 0;
+}
+
+header .img-header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 50px;
+    background-color: #01af55;
+    z-index: 1000;
+    align-items: center;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    height: 75px;
+}
+
+header .img-header-b {
+    margin: 0 0 1.05vw;
+    -moz-margin: 1.05vw 0;
+}
+
+header .img-header img {
+    width: 260px;
+    height: 40px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 50px;
+}
+
+.container h1 {
+    font-size: 25px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.container p span {
+    color: #00a549;
+}
+
+.conP {
+    font-size: 16px;
+    margin: 30px 0 40px;
+}
+
+.container {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.generate h1 {
+    background-color: #00a549;
+    width: 100%;
+    color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 22px!important;
+    padding: 15px 35px;
+}
+
+.generate {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+}
+
+.allParam {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 0;
+}
+
+.clientInfo {
+    display: flex;
+    flex-direction: column;
+    border-right: 2px dotted #ebebeb;
+    padding: 0 35px;
+}
+
+.clientInfo form {
+    margin: 0 0 15px;
+}
+
+.clientInfo form p {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 3px;
+}
+
+.clientInfo form p img {
+    cursor: pointer;
+    margin: 0 0 0 5px;
+}
+
+.clientInfo .info {
+    display: flex;
+}
+
+.clientInfo .form6 p span {
+    display: flex;
+    align-items: center;
+}
+
+.clientInfo form input,
+.clientInfo form select {
+    width: 300px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    outline: none;
+    padding: 0 15px;
+    color: #333;
+}
+
+textarea[placeholder]::-webkit-input-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+textarea[placeholder]::-moz-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+textarea[placeholder]:-moz-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+textarea[placeholder]:-ms-input-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+input[placeholder]::-webkit-input-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+input[placeholder]::-moz-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+input[placeholder]:-moz-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+input[placeholder]:-ms-input-placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
+
+.formTwo {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.84vw;
+    background-color: white;
+    width: 300px;
+}
+
+
+/*checkbox*/
+
+.labelCheck {
+    display: block;
+    position: relative;
+    padding: 0px 0 0 35px;
+    margin-bottom: 0.65vw;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.labelCheck input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    margin-top: 4px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #f0f0f0;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.labelCheck:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.labelCheck input:checked ~ .checkmark {
+    background-color: #1baf55;
+    border: 2px solid #1baf55;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.labelCheck input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.labelCheck .checkmark:after {
+    left: 7.5px;
+    top: 3.5px;
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0px 2px 2px 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.clientInfo form p span {
+    color: #aeaeae;
+    font-size: 12px;
+}
+
+.clientInfo form select {
+    cursor: pointer;
+    color: #aeaeae;
+}
+
+.form5 {
+    display: flex;
+    flex-direction: row;
+}
+
+.form5 form input {
+    width: 220px;
+}
+
+.form5 form input[type=button] {
+    background-color: #7d95a3;
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form5 form {
+    display: flex;
+    flex-direction: column;
+}
+
+.clientInfo form textarea {
+    width: 300px;
+    height: 85px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    outline: none;
+    padding: 0 15px;
+    color: #333;
+}
+
+.notes {
+    color: #aeaeae;
+    font-size: 13px!important;
+    font-weight: lighter!important;
+    font-style: italic;
+    width: 300px;
+}
+
+.clientInfo a {
+    color: #01af55;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.clientInfo form:last-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#submit {
+    background-color: #01af55;
+    color: white;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.base {
+    display: flex;
+    flex-direction: column;
+    padding: 0 35px;
+}
+
+.base .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 20px;
+}
+
+.base .title p {
+    margin: 0;
+    font-weight: bold;
+    padding: 0 0 0 5px;
+}
+
+.base .title .circle {
+    width: 10px!important;
+    height: 10px;
+    background-color: #01af55;
+    border-radius: 50%;
+}
+
+.base .title div {
+    display: flex;
+    align-items: center;
+}
+
+.base .title select {
+    border: none;
+    outline: none;
+    color: #aeaeae;
+    cursor: pointer;
+}
+
+#firstLine {
+    color: #01af55;
+    font-size: 17px;
+    font-weight: bold;
+    border-top: 2px solid #eef1f0;
+}
+
+#firstLine .cl4 {
+    display: table-cell;
+}
+
+table {
+    border-spacing: 0;
+}
+
+table tr {
+    height: 50px;
+    border-top: 2px solid #eef1f0;
+    color: black;
+    font-size: 15px;
+}
+
+.cl1 {
+    width: 40px;
+    border-top: 1px solid #eef1f0;
+    font-weight: bold;
+}
+
+.cl2 {
+    width: 135px;
+    border-top: 1px solid #eef1f0;
+    font-weight: bold;
+}
+
+.cl3 {
+    width: 115px;
+    border-top: 1px solid #eef1f0;
+    font-weight: bold;
+}
+
+.cl4 {
+    width: 165px;
+    border-top: 1px solid #eef1f0;
+    /*    */
+}
+
+.greenText {
+    color: #01af55;
+    font-weight: bold;
+}
+
+.cl4 div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cl4 div span {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    color: #333!important;
+}
+
+.cl4 div p {
+    font-weight: bold;
+    padding: 0 0 0 5px;
+}
+
+.cl4 span img {
+    margin: 0 5px 0 0;
+}
+
+.cl4 span {
+    font-weight: bold;
+}
+
+.cl5 {
+    width: 165px;
+    border-top: 1px solid #eef1f0;
+}
+
+.cl5 span {
+    font-weight: bold;
+}
+
+.cl6 {
+    width: 135px;
+    border-top: 1px solid #eef1f0;
+    font-weight: bold;
+}
+
+.cl7 {
+    width: 205px;
+    border-top: 1px solid #eef1f0;
+}
+
+.cl8 {
+    width: 135px;
+    border-top: 1px solid #eef1f0;
+}
+
+@media all and (max-width:1440px) {
+    .clientInfo form input,
+    .clientInfo form select {
+        width: 280px;
+    }
+    .form5 form input {
+        width: 200px;
+    }
+    .clientInfo form textarea {
+        width: 280px;
+    }
+    .notes {
+        width: 280px;
+    }
+    #firstLine {
+        font-size: 14px;
+    }
+    table tr {
+        font-size: 13px;
+    }
+    .formTwo {
+        width: 280px;
+    }
+}
+
+@media all and (max-width:1024px) {
+    .clientInfo form input,
+    .clientInfo form select {
+        width: 200px;
+    }
+    .form5 form input {
+        width: 120px;
+    }
+    .form5 form .media {
+        width: 120px;
+    }
+    .clientInfo form textarea {
+        width: 200px;
+    }
+    .notes {
+        width: 200px;
+    }
+    .clientInfo {
+        padding: 0 15px;
+    }
+    .base {
+        padding: 0 15px;
+    }
+    .cl4 {
+        width: 140px;
+    }
+    .container {
+        padding: 40px 15px;
+    }
+    .cl6 {
+        width: 75px;
+    }
+    .form5 form input[type=button] {
+        font-size: 10.5px;
+    }
+    #submit {
+        width: 100px;
+    }
+    .clientInfo a {
+        font-size: 12px;
+    }
+    .formTwo {
+        width: 200px;
+    }
+    .generate h1 {
+        padding: 15px;
+    }
+    .cl7 {
+        width: 115px;
+    }
+    .cl8 {
+        width: 40px;
+    }
+    .cl3 {
+        width: 90px;
+    }
+    .cl1 {
+        width: 20px;
+    }
+    .cl2 {
+        width: 103px;
+    }
+    #firstLine {
+        font-size: 13px;
+    }
+    .media {
+        width: 200px;
+    }
+    .cl5 {
+        width: 135px;
+    }
+    header .img-header {
+        padding: 0 15px;
+    }
+    header .menu {
+        padding: 0.6vw 15px;
+    }
+   
+}
